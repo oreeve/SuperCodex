@@ -1,0 +1,22 @@
+<h3>Edit This Super!</h3>
+<form>
+<p>Name:<br>{{input value=model.name}}</p>
+
+<p>Type (Hero, Anti-Hero, or Villain):<br>
+
+  <!-- <select value={{model.category}}>
+    {{#each categories as |type|}}
+    <option value="{{type}}" selected={{ category type}}>{{type}}</option>
+    {{/each}}
+  </select> -->
+
+{{input value=model.category}}
+</p>
+
+<p>Secret Identity:<br>{{input value=model.secretIdentity}}</p>
+<p>Gender:<br>{{input value=model.gender}}</p>
+<p>Base of Operations:<br>{{input value=model.baseOfOperations}}</p>
+<p>Description:<br>{{textarea value=model.description rows="10"}}</p>
+<button {{action "savePost"}}>Save</button>
+</form>
+{{outlet}}

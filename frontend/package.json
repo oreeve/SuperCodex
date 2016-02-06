@@ -1,7 +1,7 @@
 {
-  "name": "codex",
+  "name": "frontend",
   "version": "0.0.0",
-  "description": "Small description for codex goes here",
+  "description": "Small description for frontend goes here",
   "private": true,
   "directories": {
     "doc": "doc",

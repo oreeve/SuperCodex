@@ -6,6 +6,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('supers', function() {
+    this.route('edit', { path: ':id/edit'});
+    this.route('show', { path: ':id'});
+    this.route('new');
+  });
 });
 
 export default Router;

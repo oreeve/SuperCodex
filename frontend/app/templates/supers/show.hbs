@@ -1,0 +1,8 @@
+<h3>{{model.name}}</h3>
+<p> Type: {{model.category}}</p>
+<p> Secret Identity: {{model.secretIdentity}}</p>
+<p> Gender: {{model.gender}}</p>
+<p> Base of Operations: {{model.baseOfOperations}}</p>
+<p> Description: {{model.description}}</p>
+{{#link-to "supers.edit" model}}Edit This Super{{/link-to}}
+{{outlet}}
