@@ -8,9 +8,15 @@ export default Ember.Route.extend({
     deleteSuper() {
       const currentSuper = this.currentModel;
       this.store.find('super', currentSuper.id).then((word) => {
-        word.destroyRecord().then(() => {
+
+        let confirmation = confirm("Are you sure you want to delete this super from the codex?");
+
+        if (confirmation) {
+          word.destroyRecord().then(() => {
           this.transitionTo('supers');
-        });
+          });
+        }
+
       });
     }
   }
