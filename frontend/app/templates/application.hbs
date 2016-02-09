@@ -1,5 +1,30 @@
-<h1 id="title">The Codex</h1>
-{{#link-to "supers"}}See All Supers{{/link-to}}
-{{#link-to "supers.new"}}Add New Super{{/link-to}}
+<html>
+<head>
+  <title>The Codex</title>
+</head>
+<body>
+<nav class="navbar navbar-default text-center">
+  <div class="container-fluid">
+    <div class="navbar header">
+      <h1 id="title">The Codex</h1>
+      <div class="nav navbar-nav">
+        <div class="col-md-12">
+        <ul>
+          <li>{{#link-to "supers" tagName="button" class="btn btn-warning btn-lg"}}See All Supers{{/link-to}}</li>
+          <li>{{#link-to "supers.new" tagName="button" class="btn btn-warning btn-lg"}}Add New Super{{/link-to}}</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
 
 {{outlet}}
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+</body>
+</html>

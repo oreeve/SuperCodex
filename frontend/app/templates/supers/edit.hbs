@@ -1,22 +1,40 @@
-<h3>Edit This Super!</h3>
+<div class="container text-center">
 <form>
-<p>Name:<br>{{input value=model.name}}</p>
-
-<p>Type (Hero, Anti-Hero, or Villain):<br>
-
+  <h2>Edit This Super</h2>
+  <div class="form-group">
+    <p>Name:</p>
+    {{input class="text-center" value=model.name}}
+  </div>
+  <div class="form-group">
+    <p>Hero, Anti-Hero, or Villain?</p>
   <!-- <select value={{model.category}}>
     {{#each categories as |type|}}
     <option value="{{type}}" selected={{ category type}}>{{type}}</option>
     {{/each}}
   </select> -->
+    {{input class="text-center" value=model.category}}
+  </div>
 
-{{input value=model.category}}
-</p>
+  <div class="form-group">
+    <p>Secret Identity:</p>
+    {{input class="text-center" value=model.secretIdentity}}
+  </div>
 
-<p>Secret Identity:<br>{{input value=model.secretIdentity}}</p>
-<p>Gender:<br>{{input value=model.gender}}</p>
-<p>Base of Operations:<br>{{input value=model.baseOfOperations}}</p>
-<p>Description:<br>{{textarea value=model.description rows="10"}}</p>
-<button {{action "savePost"}}>Save</button>
+  <div class="form-group">
+    <p>Gender:</p>
+    {{input class="text-center" value=model.gender}}
+  </div>
+
+  <div class="form-group">
+    <p>Base of Operations:</p>
+    {{input class="text-center" value=model.baseOfOperations}}
+  </div>
+
+  <div class="form-group">
+    <p>Description:</p>
+    {{textarea class="text-center" value=model.description rows="8"}}
+  </div>
+
+<button {{action "saveEdits"}} class="btn btn-success btn-lg">Save Changes</button>
 </form>
-{{outlet}}
+</div>

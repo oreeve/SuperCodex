@@ -1,20 +1,38 @@
-<h3>Add to the Codex!</h3>
+<div class="container text-center">
+  {{#each error in validationErrors}}
+  <div class="alert alert-danger" role="alert">
+    {{error}}
+  </div>
+  {{/each}}
 <form>
-<p>Name:<br>{{input value=model.name}}</p>
+  <h2>Add to the Codex</h2>
 
-<p>Type (Hero, Anti-Hero, or Villain):<br>
-  <!-- <select onchange={{action "selectCategory" value="model.category"}}>
-    {{#each categories as |type|}}
-    <option value="{{type}}" selected={{ category type}}>{{type}}</option>
-    {{/each}}
-  </select> -->
-{{input value=model.category}}
-</p>
+  <div class="form-group">
+    {{input value=model.name class="text-center" placeholder="Name"}}
+  </div>
 
-<p>Secret Identity:<br>{{input value=model.secretIdentity}}</p>
-<p>Gender:<br>{{input value=model.gender}}</p>
-<p>Base of Operations:<br>{{input value=model.baseOfOperations}}</p>
-<p>Description:<br>{{textarea value=model.description rows="10"}}</p>
-<button {{action "savePost"}}>Save</button>
-</form>
-{{outlet}}
+  <div class="form-group">
+    {{input value=model.category class="text-center" placeholder="Hero, Anti-Hero, or Villain?"}}
+  </div>
+
+  <div class="form-group">
+    {{input value=model.secretIdentity class="text-center" placeholder="Secret Identity"}}
+  </div>
+
+  <div class="form-group">
+    {{input value=model.gender class="text-center" placeholder="Gender"}}
+  </div>
+
+  <div class="form-group">
+    {{input value=model.baseOfOperations class="text-center" placeholder="Base of Operations"}}
+  </div>
+
+  <div class="form-group">
+    {{textarea value=model.description class="text-center" rows="10" placeholder="Description"}}
+  </div>
+
+  <button {{action "saveSuper"}} type="submit" class="btn btn-success btn-lg">Add Super</button>
+
+  </form>
+
+</div>

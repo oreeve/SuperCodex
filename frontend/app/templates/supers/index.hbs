@@ -1,13 +1,18 @@
-<h2>Supers:</h2>
 
-{{#each model as |super|}}
-  <h3>{{#link-to "supers.show" super}}{{super.name}}{{/link-to}}</h3>
-  {{#link-to "supers.edit" super}}Edit This Super{{/link-to}}
-  <p> Type: {{super.category}}</p>
-  <p> Secret Identity: {{super.secretIdentity}}</p>
-  <p> Gender: {{super.gender}}</p>
-  <p> Base of Operations: {{super.baseOfOperations}}</p>
-  <p> Description: {{super.description}}</p>
-{{/each}}
-
+<div class="container">
+<div class="row">
+<div class="super-list">
+<ul>
+  {{#each model as |super|}}
+    <div class="col-md-4 col-md-offset-3 text-center">
+      <li>
+        <h3>{{#link-to "supers.show" super}}{{super.name}}{{/link-to}}</h3>
+        <p>{{super.category}}</p>
+      </li>
+    </div>
+  {{/each}}
+</ul>
+</div>
+</div>
+</div>
 {{outlet}}

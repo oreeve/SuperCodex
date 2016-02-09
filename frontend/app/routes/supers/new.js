@@ -5,11 +5,19 @@ export default Ember.Route.extend({
     return this.store.createRecord('super');
   },
   actions: {
-    savePost() {
+    saveSuper() {
       let model = this.get('controller.model');
       model.save().then(() => {
         this.transitionTo('supers');
       });
+    },
+
+    willTransition() {
+      let model = this.get('controller.model');
+
+      if (model.get('isNew')) {
+        model.destroyRecord();
+      }
     }
   }
 });

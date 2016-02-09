@@ -1,0 +1,95 @@
+
+html, body {
+  background: url(http://bigzzsandthedreemteem.com/img/background/city.png) no-repeat;
+  background-size: cover;
+}
+
+.container-fluid h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.navbar-nav {
+  float:none !important;
+  padding-right: 50px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.nav li {
+  display: inline;
+}
+
+.form-group input {
+  width: 250px;
+}
+.form-group textarea {
+  width: 400px;
+}
+
+.form-group p {
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9)
+}
+
+form {
+  background-color: rgba(213, 213, 213, 0.85);
+  padding: 15px;
+  border-radius: 15px;
+  margin-left: 250px;
+  margin-right: 250px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+form h2 {
+  font-weight: bold;
+}
+.super-list .col-md-4 {
+  background-color: rgba(23, 23, 23, 0.55);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+}
+
+.col-md-4 a {
+  font-family: "Courier New", Courier, monospace;
+  color: rgba(255, 200, 0, 1);
+  text-shadow: 1px 1px 1px rgba(155, 155, 155, 0.9);
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.col-md-4 a:hover {
+  color:#ec971f;
+}
+
+.col-md-4 p {
+  font-size: 20px;
+  text-shadow: 1px 1px 1px rgba(155, 155, 155, 0.9);
+  font-weight: bold;
+}
+
+
+.superinfo h2 {
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 50px;
+}
+
+.superinfo p {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.superinfo {
+  font-size: 18px;
+  background-color: rgba(213, 213, 213, 0.85);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}

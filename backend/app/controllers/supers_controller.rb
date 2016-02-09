@@ -1,10 +1,12 @@
 class SupersController < JSONAPI::ResourceController
   # def index
   #   @supers = Super.all
+  #   render json: @supers
   # end
   #
   # def show
-  #   # @super = Super.find(params[:id])
+  #   @super = Super.find(params[:id])
+  #   render json: @super
   #   # resource = SuperResource.new(@super, nil)
   #   # serializer = JSONAPI::ResourceSerializer.new(SuperResource)
   #   # render json: serializer.serialize_to_hash(resource)
@@ -17,11 +19,11 @@ class SupersController < JSONAPI::ResourceController
   # def create
   #   @super = Super.new(super_params)
   #   if @super.save
-  #     flash[:success] = "Super added to codex."
-  #     redirect_to supers_path
+  #     render json: @super,
+  #     status: :created,
+  #     location: [@super]
   #   else
-  #     flash[:warning] = @super.errors.full_messages.join(', ')
-  #     render :new
+  #     render json: { errors: @super.errors }, status: :unprocessable_entity
   #   end
   # end
   #
@@ -32,18 +34,16 @@ class SupersController < JSONAPI::ResourceController
   # def update
   #   @super = Super.find(params[:id])
   #   if @super.update(super_params)
-  #     flash[:success] = "Super updated."
-  #     redirect_to @super
+  #     render json: @super
   #   else
-  #     render :edit
+  #     render json: { errors: @super.errors }, status: :unprocessable_entity
   #   end
   # end
   #
   # def destroy
   #   @super = Super.find(params[:id])
   #   @super.destroy
-  #   flash[:success] = "Super removed from codex."
-  #   redirect_to supers_path
+  #   render json: @super
   # end
   #
   # private

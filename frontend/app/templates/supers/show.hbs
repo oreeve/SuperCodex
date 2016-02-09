@@ -1,8 +1,17 @@
-<h3>{{model.name}}</h3>
-<p> Type: {{model.category}}</p>
-<p> Secret Identity: {{model.secretIdentity}}</p>
-<p> Gender: {{model.gender}}</p>
-<p> Base of Operations: {{model.baseOfOperations}}</p>
-<p> Description: {{model.description}}</p>
-{{#link-to "supers.edit" model}}Edit This Super{{/link-to}}
-{{outlet}}
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-md-offset-3 text-center">
+<div class="superinfo">
+<h2>{{model.name}}</h2>
+<p> Type:</p> {{model.category}}<br><br>
+<p> Secret Identity:</p> {{model.secretIdentity}}<br><br>
+<p> Gender:</p> {{model.gender}}<br><br>
+<p> Base of Operations:</p> {{model.baseOfOperations}}<br><br>
+<p> Description:</p> {{model.description}}<br><br>
+
+{{#link-to "supers.edit" model tagName="button" class="btn btn-warning btn-lg"}}Edit Super{{/link-to}}
+<button class="btn btn-warning btn-lg" {{action "deleteSuper" model}}>Delete Super</button>
+</div>
+</div>
+</div>
+</div>
